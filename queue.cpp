@@ -13,6 +13,7 @@ class linklist
 public:
 	node* head;
 	int size;
+	//初始化
 	void init()
 	{
 		size = 0;
@@ -20,8 +21,8 @@ public:
 		head->next = NULL;
 	}
 
-
-	void headinsert(int x)
+	//尾插法
+	void tailinsert(int x)
 	{
 		node* r = head;
 		node* s = new node();
@@ -33,7 +34,7 @@ public:
 		s->next = NULL;
 		r->next = s;
 	}
-
+	//遍历打印
 	void print()
 	{
 		node* s = head;
@@ -56,7 +57,7 @@ int main()
 	for (int i = 0; i < n; i++)
 	{
 		cin >> x;
-		p.headinsert(x);
+		p.tailinsert(x);
 	}
 	p.print();
 
